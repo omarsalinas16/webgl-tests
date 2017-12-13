@@ -54,4 +54,20 @@ class Renderer {
 	useProgram() {
 		gl.useProgram(this.program);
 	}
+
+	getAttribLocation(name) {
+		if (this.program) {
+			return gl.getAttribLocation(this.program, name);
+		}
+
+		return null;
+	}
+
+	getUniformLocation(name) {
+		if (this.program) {
+			return gl.getUniformLocation(this.program, name);
+		}
+
+		return null;
+	}
 }

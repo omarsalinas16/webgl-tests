@@ -41,7 +41,7 @@ class Texture {
 		return texture;
 	}
 
-	bindTexture() {
+	useTexture() {
 		gl.bindTexture(gl.TEXTURE_2D, this.texture);
 		gl.activeTexture(gl.TEXTURE0);
 	}
